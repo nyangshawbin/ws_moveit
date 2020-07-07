@@ -62,8 +62,5 @@ To control simulated robot in gazebo using [command line](http://docs.ros.org/me
 rosrun moveit_commander moveit_commander_cmdline.py
 ```
 
-### Camera Plugin
-![Camera Image]
-
 ## Hardware
 Click here for documentation on hardware interface.
