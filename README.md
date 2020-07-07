@@ -63,4 +63,4 @@ rosrun moveit_commander moveit_commander_cmdline.py
 ```
 
 ## Hardware
-Click here for documentation on hardware interface.
+Click [here](https://github.com/nyangshawbin/ws_moveit/tree/master/hardware) for documentation on hardware interface.
