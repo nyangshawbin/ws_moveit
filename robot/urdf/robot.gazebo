@@ -72,5 +72,4 @@
     <material>Gazebo/White</material>
     <turnGravityOff>true</turnGravityOff>
   </gazebo>
-
 </robot>
