@@ -7,11 +7,10 @@ This repo contains a work-in-progress project. Currently, it has the following f
    
 2. [Moveit Package](#moveit)
    * Execute planned trajectory from MoveIt onto Gazebo robot.
-   * Moveit Commander Scripting
-
-3. [Move Group C++ interface](#cppinterface)
+   * Moveit Commander Scripting.
+   
+3. [Move Group C++ interface](#move-group-cpp-interface)
    * Using MoveGroupInterface class to carry out most operations. 
-
 
 4. [Hardware Package](#hardware)
    * Documentation on low level control.
@@ -49,7 +48,7 @@ Launch robot in gazebo with its controller loaded
 roslaunch robot_gazebo robot_gazebo.launch
 ```
 
-Launch main moveit file
+Run main moveit file
 
 ```
 roslaunch robot_moveit robot_planning_execution.launch
@@ -66,7 +65,20 @@ To control simulated robot in gazebo using [command line](http://docs.ros.org/me
 rosrun moveit_commander moveit_commander_cmdline.py
 ```
 
-### Cpp Interface
+## Move Group Cpp Interface
+
+Launch robot in gazebo and main Moveit file as before
+
+```
+roslaunch robot_gazebo robot_gazebo.launch
+
+roslaunch robot_moveit robot_planning_execution.launch
+```
+Run the launch file, use the [RvizVisualToolsGui](http://docs.ros.org/melodic/api/moveit_tutorials/html/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html#rviz-visual-tools) panel to step through the demo
+
+```
+roslaunch moveit_tutorials move_group_robot.launch
+```
 
 ## Hardware
 Click [here](https://github.com/nyangshawbin/ws_moveit/tree/master/hardware) for documentation on hardware interface.
