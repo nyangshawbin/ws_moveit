@@ -9,7 +9,11 @@ This repo contains a work-in-progress project. Currently, it has the following f
    * Execute planned trajectory from MoveIt onto Gazebo robot.
    * Moveit Commander Scripting
 
-3. [Hardware Package](#hardware)
+3. [Move Group C++ interface](#cppinterface)
+   * Using MoveGroupInterface class to carry out most operations. 
+
+
+4. [Hardware Package](#hardware)
    * Documentation on low level control.
    
 ## Demo
@@ -61,6 +65,8 @@ To control simulated robot in gazebo using [command line](http://docs.ros.org/me
 ```
 rosrun moveit_commander moveit_commander_cmdline.py
 ```
+
+### Cpp Interface
 
 ## Hardware
 Click [here](https://github.com/nyangshawbin/ws_moveit/tree/master/hardware) for documentation on hardware interface.
