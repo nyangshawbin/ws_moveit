@@ -79,6 +79,17 @@ Run the launch file, use the [RvizVisualToolsGui](http://docs.ros.org/melodic/ap
 ```
 roslaunch moveit_tutorials move_group_robot.launch
 ```
+### Expected output:
+Each step can be visualized in Rviz, and motion executed on Gazebo Robot.
+
+  1. Robot moves arm to pose goal.
+  2. Robot moves arm to along cartesian waypoints.
+  3. Robot moves its arm to joint goal.
+  4. A box object is added into the environment to the left of the arm.
+  5. Robot moves its arm to the new pose goal, avoiding collision with the box
+  6. The object is attached to the robot (its color will change to purple/orange/green).
+  7. The object is detached from the wrist (its color will change back to green).
+  8. The object is removed from the environment.
 
 ## Hardware
 Click [here](https://github.com/nyangshawbin/ws_moveit/tree/master/hardware) for documentation on hardware interface.
