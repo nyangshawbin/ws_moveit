@@ -304,6 +304,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
+        "": true
         Grid: true
         MarkerArray: true
         MotionPlanning: true
