@@ -13,7 +13,7 @@
   <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager" />
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
 
-  <!-- loads controllers to the param server -->
+  <!-- Helps moveit to locate controllers -->
   <rosparam file="$(find robot_control)/config/controllers.yaml"/>
 
 </launch>
