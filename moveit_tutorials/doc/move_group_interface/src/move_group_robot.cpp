@@ -206,9 +206,9 @@ int main(int argc, char** argv)
   ROS_INFO_NAMED("tutorial", "Executing motion");
   move_group.move();
 
-  //*******************************//
-  // TASK 4: ADDING,ATTATCHING,DETACHING,REMOVING OBJECT INTO/FROM WORLD
-  //*******************************//
+  //**********************************//
+  // TASK 4: ADDING OBJECT INTO WORLD
+  //**********************************//
   visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue");
 
   moveit_msgs::CollisionObject collision_object;
@@ -247,6 +247,10 @@ int main(int argc, char** argv)
   visual_tools.publishText(text_pose, "Add object", rvt::WHITE, rvt::XLARGE);
   visual_tools.trigger();
 
+  //************************************//
+  // TASK 5: MOVING ARM, AVOIDING OBSTACLE
+  //************************************//
+
   // Now when we plan a trajectory it will avoid the obstacle
   visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue");
   move_group.setStartState(*move_group.getCurrentState());
@@ -269,29 +273,42 @@ int main(int argc, char** argv)
   ROS_INFO_NAMED("tutorial", "Executing motion");
   move_group.move();
 
+  //*********************************//
+  // TASK 6: ATTACH OBJECT TO ROBOT ARM
+  //*********************************//
+
   // Now, let's attach the collision object to the robot.
-  ROS_INFO_NAMED("tutorial", "Attach the object to the robot");
+  visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue");
   move_group.attachObject(collision_object.id);
+  ROS_INFO_NAMED("tutorial", "Attach the object to the robot");
 
   // Show text in RViz of status
   visual_tools.publishText(text_pose, "Object attached to robot", rvt::WHITE, rvt::XLARGE);
   visual_tools.trigger();
+  
+  //***********************************//
+  // TASK 7: DETACH OBJECT FROM ROBOT ARM
+  //***********************************//
 
   // Now, let's detach the collision object from the robot.
   visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue");
-  ROS_INFO_NAMED("tutorial", "Detach the object from the robot");
   move_group.detachObject(collision_object.id);
+  ROS_INFO_NAMED("tutorial", "Detach the object from the robot");
 
   // Show text in RViz of status
   visual_tools.publishText(text_pose, "Object detached from robot", rvt::WHITE, rvt::XLARGE);
   visual_tools.trigger();
 
+  //*******************************//
+  // TASK 8: REMOVE OBJECT FROM WORLD
+  //*******************************//
+
   // Now, let's remove the collision object from the world.
   visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue");
-  ROS_INFO_NAMED("tutorial", "Remove the object from the world");
   std::vector<std::string> object_ids;
   object_ids.push_back(collision_object.id);
   planning_scene_interface.removeCollisionObjects(object_ids);
+  ROS_INFO_NAMED("tutorial", "Remove the object from the world");
 
   // Show text in RViz of status
   visual_tools.publishText(text_pose, "Object removed", rvt::WHITE, rvt::XLARGE);
