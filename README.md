@@ -11,7 +11,8 @@ This repo contains a work-in-progress project which documents MoveIt motion plan
    
 3. [Move Group C++ interface](#move-group-cpp-interface)
    * Using MoveGroupInterface class to carry out most operations. 
-
+   
+  
 For low level control/ hardware interfacing with real robot, please refer to the [Arm package](https://github.com/nyangshawbin/ws_moveit/tree/arm_robot/arm), which is set up to run a 2-DOF arm demo.
    
 ## Demo
