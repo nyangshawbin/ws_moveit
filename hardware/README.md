@@ -29,4 +29,7 @@ rostopic pub /servo_position_command std_msgs/Float32 "data: 0.75"
 
 
 ## Webcam 
-
+![streaming camera feed](https://github.com/nyangshawbin/ws_moveit/blob/hardware/hardware/usb_cam/images/webcam.png)
+```
+roslaunch usb_cam usb_cam.launch
+```
