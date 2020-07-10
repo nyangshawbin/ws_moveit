@@ -7,6 +7,9 @@ This shows the documentation of low level control. Currently, it has the followi
   
 2. [Webcam Package](#webcam)
   * Streaming webcam
+ 
+3. [Hardware-Moveit Interface](#hardware-interface)
+  * Controlling servo from MoveIt's interface 
 
 
 
@@ -33,3 +36,8 @@ rostopic pub /servo_position_command std_msgs/Float32 "data: 0.75"
 ```
 roslaunch usb_cam usb_cam.launch
 ```
+
+
+## Hardware Interface
+
+-in progress-
