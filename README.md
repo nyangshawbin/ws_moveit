@@ -18,14 +18,14 @@ Please refer to the [Arm package](https://github.com/nyangshawbin/ws_moveit/tree
    
 ## Demo
 ### Rviz GUI
-![Robot joint rviz GUI image](https://github.com/nyangshawbin/ws_moveit/blob/master/images/robot_rviz.gif)
+![Robot joint rviz GUI image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/robot_rviz.gif)
 
 ```
 roslaunch moveit_demo robot_rviz.launch
 ```
 
 ### Gazebo Joint Position Control
-![Gazebo demo image](https://github.com/nyangshawbin/ws_moveit/blob/master/images/robot_gazebo_demo.gif)
+![Gazebo demo image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/robot_gazebo_demo.gif)
 
 ```
 roslaunch moveit_demo robot_world.launch
@@ -41,7 +41,7 @@ rostopic pub /robot/joint1_position_controller/command std_msgs/Float64 "data: -
 ## MoveIt
 
 ### Execute motion planned by MoveIt 
-![Execute trajectory image](https://github.com/nyangshawbin/ws_moveit/blob/master/images/moveit_motion_planning.gif)
+![Execute trajectory image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/moveit_motion_planning.gif)
 
 Launch robot in gazebo with its controller loaded
 
@@ -59,7 +59,7 @@ Change state in planning tab of Motion Planning plugin. Plan and execute to visu
 
 ### MoveIt Commander Scripting
 
-![Command line control image](https://github.com/nyangshawbin/ws_moveit/blob/master/images/command_line_control.gif)
+![Command line control image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/command_line_control.gif)
 
 To control simulated robot in gazebo using [command line](http://docs.ros.org/melodic/api/moveit_tutorials/html/doc/moveit_commander_scripting/moveit_commander_scripting_tutorial.html): 
 ```
