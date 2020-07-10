@@ -1,19 +1,20 @@
-## Summary:
+# Summary:
 
-This repo contains a work-in-progress project. Currently, it has the following few features:
+## Gazebo Robot
+This repo contains a work-in-progress project which documents MoveIt motion planning on a custom 6-DOF robot simulated in Gazebo.  Currently, it has the following features:
 1. [Demo Package](#demo) 
    * Visualize robot's joints through Rviz GUI slider.
-   * Publish joint goal position to Gazebo robot directly.
+   * Publish joint goal position to Gazebo robot.
    
 2. [Moveit Package](#moveit)
-   * Execute planned trajectory from MoveIt onto Gazebo robot.
+   * Execute motion planning from MoveIt to Gazebo robot.
    * Moveit Commander Scripting.
    
 3. [Move Group C++ interface](#move-group-cpp-interface)
-   * Using MoveGroupInterface class to carry out most operations. 
-
-4. [Hardware Package](#hardware)
-   * Documentation on low level control.
+   * Using MoveGroupInterface class to carry out most basic operations. 
+   
+## Hardware Interface
+Please refer to the [Arm package](https://github.com/nyangshawbin/ws_moveit/tree/arm_robot/arm) for low level control/ hardware interfacing with real robot, which is set up to run a 2-DOF arm demo.
    
 ## Demo
 ### Rviz GUI
@@ -90,6 +91,3 @@ Each step can be visualized in Rviz, and motion executed on Gazebo Robot.
   6. The object is attached to the robot.
   7. The object is detached from the wrist.
   8. The object is removed from the environment.
-
-## Hardware
-Click [here](https://github.com/nyangshawbin/ws_moveit/tree/master/hardware) for documentation on hardware interface.
