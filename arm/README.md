@@ -18,7 +18,7 @@ This shows the documentation of low level control. Currently, it has the followi
 
 ![microcontroller](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/images/servo.png)
 
-Set up rosserial connection between pc and microcontroller. And run the following commands to test the connection.
+Following section shows how to establish the rosserial connection between pc and microcontroller. Servo should move to show connection has been successfully established.
 
 First initialize connection between ROS and microcontroller:
 ```
