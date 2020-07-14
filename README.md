@@ -43,13 +43,13 @@ rostopic pub /robot/joint1_position_controller/command std_msgs/Float64 "data: -
 ### Execute motion planned by MoveIt 
 ![Execute trajectory image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/moveit_motion_planning.gif)
 
-Launch robot in gazebo with its controller loaded
+Launch robot in gazebo
 
 ```
 roslaunch robot_gazebo robot_gazebo.launch
 ```
 
-Run main moveit file
+Launch main moveit file
 
 ```
 roslaunch robot_moveit robot_planning_execution.launch

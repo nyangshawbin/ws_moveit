@@ -18,7 +18,7 @@ This shows the documentation of low level control. Currently, it has the followi
 ## Servo
 ### Sending command to servo
 
-![microcontroller](https://github.com/nyangshawbin/ws_moveit/blob/hardware/hardware/servo/images/servo.png)
+![microcontroller](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/images/servo.png)
 
 Firstly initialize connection between ROS and microcontroller:
 ```
@@ -32,7 +32,7 @@ rostopic pub /servo_position_command std_msgs/Float32 "data: 0.75"
 
 
 ## Webcam 
-![streaming camera feed](https://github.com/nyangshawbin/ws_moveit/blob/hardware/hardware/usb_cam/images/webcam.png)
+![streaming camera feed](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/usb_cam/images/webcam.png)
 ```
 roslaunch usb_cam usb_cam.launch
 ```
