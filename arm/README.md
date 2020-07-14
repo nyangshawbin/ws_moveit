@@ -51,4 +51,6 @@ With the Gazebo simulation and Rviz running, execute each of the following comma
 * `roslaunch servo servo_rosserial.launch` (Establish rosserial connection)
 * `rostopic echo /servo_position_command` (Since servo has no encoder and it's open-looped, 'feedback' is hardcoded and copied from its servo position command)
 
-Servo subscribes to /arm/joint_states as published by Gazebo. Scaling of servo position is done in [rosserial node](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/arduino_servo/servo_moveit_interface/servo_moveit_interface.ino) to ensure that the final servo position command is within the servo's desired [min_pos, max_pos] range. 
+![servo_moveit_interface](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/images/servo_hardware_interface.gif)
+
+When new goal state is set in the planning tab of the motion planning plugin in Rviz, Servo (*bottom of monitor*) moves accordingly in-sync with the Gazebo simulated robot. The servo subscribes to /arm/joint_states published by Gazebo. Scaling of servo position is done in [rosserial node](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/arduino_servo/servo_moveit_interface/servo_moveit_interface.ino) to ensure that the final servo position command is within the servo's desired [min_pos, max_pos] range. 
