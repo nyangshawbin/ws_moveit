@@ -2,10 +2,8 @@
 
 This shows the documentation of low level control. Currently, it has the following features:
 
-1. [Servo Package](#servo)
-  * Sending servo position command
-  
-2. [Webcam Package](#webcam)
+1. [Demo](#demo)
+  * Sending position command to servo 
   * Streaming webcam
  
 3. [Hardware-Moveit Interface](#hardware-interface)
@@ -15,7 +13,7 @@ This shows the documentation of low level control. Currently, it has the followi
 
 
 
-## Servo
+## Demo
 ### Sending command to servo
 
 ![microcontroller](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/images/servo.png)
@@ -31,7 +29,8 @@ rostopic pub /servo_position_command std_msgs/Float32 "data: 0.75"
 ```
 
 
-## Webcam 
+### Streaming webcam
+
 ![streaming camera feed](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/usb_cam/images/webcam.png)
 ```
 roslaunch usb_cam usb_cam.launch
@@ -40,7 +39,7 @@ roslaunch usb_cam usb_cam.launch
 
 ## Hardware Interface
 
-Launch arm in Gazebo and main MoveIt file
+First launch arm in Gazebo and main MoveIt file
 
 ```
 roslaunch arm_gazebo arm_gazebo.launch
