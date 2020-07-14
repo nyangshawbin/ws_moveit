@@ -17,7 +17,7 @@ This repo contains a work-in-progress project which documents MoveIt motion plan
 ![Robot joint rviz GUI image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/robot_rviz.gif)
 
 ```
-roslaunch moveit_demo robot_rviz.launch
+roslaunch robot_demo robot_rviz.launch
 ```
 
 ## MoveIt
@@ -50,7 +50,7 @@ rosrun moveit_commander moveit_commander_cmdline.py
 
 ## Move Group Cpp Interface
 
-Launch robot in gazebo and main Moveit file as before
+Launch robot in gazebo and main MoveIt file as before
 
 ```
 roslaunch robot_gazebo robot_gazebo.launch

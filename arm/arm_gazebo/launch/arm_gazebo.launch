@@ -19,14 +19,14 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
-    command="$(find xacro)/xacro --inorder '$(find robot)/urdf/robot.urdf'"/>
+    command="$(find xacro)/xacro --inorder '$(find arm_description)/urdf/arm.urdf'"/>
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
-        args="-urdf -model robot -param robot_description"/> <!-- rmb to include -model: <name> as the one stated in the urdf file-->
+        args="-urdf -model arm -param robot_description"/> <!-- rmb to include -model: <name> as the one stated in the urdf file-->
 
   <!-- Generate/Load robot description file -->
-  <include file="$(find robot_control)/launch/robot_control.launch"/>
+  <include file="$(find arm_control)/launch/arm_control.launch"/>
 
 
 </launch>

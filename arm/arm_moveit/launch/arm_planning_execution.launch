@@ -1,0 +1,24 @@
+<launch>
+
+    <rosparam command= "load" file="$(find arm_control)/config/joint_names.yaml" />
+
+    <include file= "$(find arm_demo)/launch/planning_context.launch">
+        <arg name = "load_robot_description" value="true" />
+    </include>
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="/use_gui" value="false" />
+        <rosparam param="/source_list">[/arm/joint_states] </rosparam> <!--make sure source list has full name of </robot>/joint_states-->
+    </node>
+
+    # The planning and execution components of MoveIt! configured to 
+    # publish the current configuration of the robot (simulated or real) 
+    # and the current state of the world as seen by the planner
+    <include file="$(find arm_demo)/launch/move_group.launch">
+        <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
+
+    <!--Launch Rviz visualization-->
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find arm_moveit)/rviz/arm_moveit.rviz" />
+
+</launch>

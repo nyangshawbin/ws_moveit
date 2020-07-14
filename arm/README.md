@@ -40,4 +40,10 @@ roslaunch usb_cam usb_cam.launch
 
 ## Hardware Interface
 
--in progress-
+Launch arm in Gazebo and main MoveIt file
+
+```
+roslaunch arm_gazebo arm_gazebo.launch
+
+roslaunch arm_moveit arm_planning_execution.launch
+```
