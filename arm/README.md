@@ -6,8 +6,8 @@ This shows the documentation of low level control. Currently, it has the followi
   * Sending position command to servo 
   * Streaming webcam
  
-3. [Hardware-Moveit Interface](#hardware-interface)
-  * Controlling servo from MoveIt's interface 
+2. [Hardware-Moveit Interface](#hardware-interface)
+  * Controlling servo from MoveIt's FollowJointTrajectory action server 
 
 
 
@@ -18,7 +18,9 @@ This shows the documentation of low level control. Currently, it has the followi
 
 ![microcontroller](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/images/servo.png)
 
-Firstly initialize connection between ROS and microcontroller:
+Set up rosserial connection between pc and microcontroller. And run the following commands to test the connection.
+
+First initialize connection between ROS and microcontroller:
 ```
 roslaunch servo servo_rosserial.launch
 ```
