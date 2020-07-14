@@ -4,7 +4,6 @@
 This repo contains a work-in-progress project which documents MoveIt motion planning on a custom 6-DOF robot simulated in Gazebo.  Currently, it has the following features:
 1. [Demo Package](#demo) 
    * Visualize robot's joints through Rviz GUI slider.
-   * Publish joint goal position directly to Gazebo robot.
    
 2. [Moveit Package](#moveit)
    * Execute motion planning from MoveIt to Gazebo robot.
@@ -20,20 +19,6 @@ This repo contains a work-in-progress project which documents MoveIt motion plan
 ```
 roslaunch moveit_demo robot_rviz.launch
 ```
-
-### Gazebo Joint Position Control
-![Gazebo demo image](https://github.com/nyangshawbin/ws_moveit/blob/master/robot/images/robot_gazebo_demo.gif)
-
-```
-roslaunch moveit_demo robot_world.launch
-
-roslaunch moveit_demo robot_control.launch
-```
-
-#### Example: 
-```
-rostopic pub /robot/joint1_position_controller/command std_msgs/Float64 "data: -1.2"
-```  
 
 ## MoveIt
 
