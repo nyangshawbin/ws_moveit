@@ -4,7 +4,7 @@
 This repo contains a work-in-progress project which documents MoveIt motion planning on a custom 6-DOF robot simulated in Gazebo.  Currently, it has the following features:
 1. [Demo Package](#demo) 
    * Visualize robot's joints through Rviz GUI slider.
-   * Publish joint goal position to Gazebo robot.
+   * Publish joint goal position directly to Gazebo robot.
    
 2. [Moveit Package](#moveit)
    * Execute motion planning from MoveIt to Gazebo robot.
@@ -12,9 +12,6 @@ This repo contains a work-in-progress project which documents MoveIt motion plan
    
 3. [Move Group C++ interface](#move-group-cpp-interface)
    * Using MoveGroupInterface class to carry out most basic operations. 
-   
-## Hardware Interface
-Please refer to the [Arm package](https://github.com/nyangshawbin/ws_moveit/tree/arm_robot/arm) for low level control/ hardware interfacing with real robot, which is set up to run a 2-DOF arm demo.
    
 ## Demo
 ### Rviz GUI
