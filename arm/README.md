@@ -1,17 +1,13 @@
 ## Summary:
 
-This shows the documentation of low level control. Currently, it has the following features:
+This shows the documentation of low level control. This package has the same motion planning features as the [Robot package](https://github.com/nyangshawbin/ws_moveit/tree/master/robot), but with additional work on hardware interfacing. This package is set up for a simple 2-DOF arm for demo purposes. Currently, it has the following features:
 
 1. [Demo](#demo)
-  * Sending position command to servo 
-  * Streaming webcam
+  * Sending position command directly to servo to test rosserial connection. 
+  * Streaming webcam.
  
-2. [Hardware-Moveit Interface](#hardware-interface)
-  * Controlling servo from MoveIt's FollowJointTrajectory action server 
-
-
-
-
+2. [Hardware Interface](#hardware-interface)
+  * Moving real world robot (servo), synced with simulated robot's trajectory 
 
 ## Demo
 ### Sending command to servo
@@ -48,3 +44,11 @@ roslaunch arm_gazebo arm_gazebo.launch
 
 roslaunch arm_moveit arm_planning_execution.launch
 ```
+
+With the Gazebo simulation and Rviz running, execute each of the following commands in a new terminal:
+
+
+* `roslaunch servo servo_rosserial.launch` (Establish rosserial connection)
+* `rostopic echo /servo_position_command` (Since servo has no encoder and it's open-looped, 'feedback' is hardcoded and copied from its servo position command)
+
+Servo subscribes to /arm/joint_states as published by Gazebo. Scaling of servo position is done in [rosserial node](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/arduino_servo/servo_moveit_interface/servo_moveit_interface.ino) to ensure that the final servo position command is within the servo's desired [min_pos, max_pos] range. 
