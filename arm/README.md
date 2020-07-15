@@ -5,7 +5,7 @@ This shows the documentation of low level control. This package has the same mot
 1. [Demo](#demo)
   * Sending position command directly to servo to test rosserial connection. 
   * Streaming webcam
-  * Saving of image/video (*in progress*)
+  * ~~Saving of image/video~~ (*in progress*)
  
 2. [Hardware Interface](#hardware-interface)
   * Moving real world robot (servo), synced with simulated robot's trajectory 
