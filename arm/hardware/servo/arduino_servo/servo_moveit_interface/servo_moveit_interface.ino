@@ -31,7 +31,7 @@ float joint1_default = 0;
 
 
 std_msgs::UInt16 command_msg;
-ros::Publisher servo_position_command("servo_position_command", &command_msg); 
+ros::Publisher servo_position_feedback("servo_position_feedback", &command_msg); 
 
 void commandCb( const sensor_msgs::JointState& joint_state_msg){
   float joint_range = abs(joint1_min-joint1_max);
@@ -45,8 +45,8 @@ void commandCb( const sensor_msgs::JointState& joint_state_msg){
 //  command_msg.data = (scaled_joint_state * (servo_range/joint_range)); //if direction of servo rotates in the opposite direction as ros
 
 
-  //debug, echo /servo_position_command to check if command given is within servo's range
-  servo_position_command.publish(&command_msg);
+  //debug, echo /servo_position_feedback to check if command given is within servo's range
+  servo_position_feedback.publish(&command_msg);
   
   //MOVING REAL ROBOT, ENSURE SIMULATED ROBOT IS IN 'HOME' POSITION
   myservo.write(command_msg.data);
@@ -59,7 +59,7 @@ void setup() {
   //initialize your ROS node handle, advertise any topics being published, 
   // and subscribe to any topics you wish to listen to.
   nh.initNode();
-  nh.advertise(servo_position_command);
+  nh.advertise(servo_position_feedback);
   nh.subscribe(sub);
   
   myservo.attach(servo_pin);  // attaches the servo on pin 2
