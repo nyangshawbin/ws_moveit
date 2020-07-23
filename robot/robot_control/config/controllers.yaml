@@ -1,5 +1,5 @@
 controller_list:
-    # Make sure combination of <name> and <action_ns> (i.e. "<name>/<action>") is the full topic name shown with rostopic_list.
+    # Make sure combination of <name> and <action_ns> (i.e. "<name>/<action>") is the full topic name shown with rostopic_list
   - name: robot/arm_position_controller 
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
