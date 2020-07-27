@@ -8,7 +8,7 @@
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
         <param name="/use_gui" value="false" />
-        <rosparam param="/source_list">[/arm/joint_states] </rosparam> <!--make sure source list has full name of </robot>/joint_states-->
+        <rosparam param="/source_list">[/arm/joint_states] </rosparam> <!--publishes joint states back to MoveIt as feedback-->
     </node>
 
     # The planning and execution components of MoveIt! configured to 
