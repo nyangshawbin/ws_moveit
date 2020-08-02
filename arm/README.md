@@ -5,10 +5,10 @@ This shows the documentation of low level control. This package has the same mot
 1. [Demo](#demo)
   * Sending position command directly to servo to test rosserial connection. 
   * Streaming webcam
-  * ~~Saving of image/video~~ (*in progress*)
+  * Saving of image/video (*in progress*)
  
 2. [Hardware Interface](#hardware-interface)
-  * Moving real world robot (servo), synced with simulated robot's trajectory 
+  * (*in progress*)
 
 ## Demo
 ### Sending command to servo
@@ -38,20 +38,4 @@ roslaunch usb_cam usb_cam.launch
 
 ## Hardware Interface
 
-First launch arm in Gazebo and main MoveIt file
-
-```
-roslaunch arm_gazebo arm_gazebo.launch
-
-roslaunch arm_moveit arm_planning_execution.launch
-```
-
-With the Gazebo simulation and Rviz running, execute each of the following commands in a new terminal:
-
-
-* `roslaunch servo servo_rosserial.launch` (Establish rosserial connection)
-* `rostopic echo /servo_position_feedback` (Since servo has no encoder and it's open-looped, 'feedback' is hardcoded and copied from the servo position command it received. However, this assumed robot moves perfectly as commanded.)
-
-![servo_moveit_interface](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/images/servo_hardware_interface.gif)
-
-When new goal state is set and executed in the planning tab of the motion planning plugin in Rviz, Servo (*bottom of monitor*) moves accordingly in-sync with the Gazebo simulated robot. The servo subscribes to /arm/joint_states published by Gazebo. Scaling of servo position is done in [rosserial node](https://github.com/nyangshawbin/ws_moveit/blob/master/arm/hardware/servo/arduino_servo/servo_moveit_interface/servo_moveit_interface.ino) to ensure that the final servo position command is within the servo's desired [min_pos, max_pos] range. 
+(*in progress*)
